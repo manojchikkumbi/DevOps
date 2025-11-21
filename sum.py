@@ -19,3 +19,8 @@ if total % 2 == 0:
     print(f"The sum ({total}) is Even")
 else:
     print(f"The sum ({total}) is Odd")
+    script name = sysargv[0]
+    num1=15
+    num2=20
+     print(f"The sum ({total}) is Even")
+     print(f"The sum ({total}) is Odd")
