@@ -1,17 +1,29 @@
 import sys
 
-# If user provides two arguments, use them instead of defaults
-if len(sys.argv) == 3:
-    print("Arguments received successfully!")
-    num1 = int(sys.argv[1])
-    num2 = int(sys.argv[2])
-else:
-    print("No arguments provided — using default values (15 and 20).")
-    # Default values
-    num1 = 15
-    num2 = 20
+# Function to get numbers from user input
+def get_numbers_from_input():
+    while True:
+        try:
+            num1 = int(input("Enter the first number: "))
+            num2 = int(input("Enter the second number: "))
+            return num1, num2
+        except ValueError:
+            print("Invalid input! Please enter integers only.\n")
 
-# Find sum
+# Check if two command-line arguments are provided
+if len(sys.argv) == 3:
+    try:
+        num1 = int(sys.argv[1])
+        num2 = int(sys.argv[2])
+        print("Arguments received successfully!")
+    except ValueError:
+        print("Error: Command-line arguments must be integers.")
+        num1, num2 = get_numbers_from_input()
+else:
+    print("No valid command-line arguments provided — using interactive input.")
+    num1, num2 = get_numbers_from_input()
+
+# Calculate the sum
 total = num1 + num2
 
 # Check even/odd
@@ -20,6 +32,5 @@ if total % 2 == 0:
 else:
     print(f"The sum ({total}) is Odd")
 
-# Get script name
-script_name = sys.argv[0]
-print(f"Script name: {script_name}")
+# Print script name
+print(f"Script name: {sys.argv[0]}")
