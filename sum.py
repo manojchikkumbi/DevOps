@@ -20,4 +20,8 @@ script_name = sys.argv[0]
 
 # Check even/odd
 if total % 2 == 0:
-    print(f"The s
+    print(f"The sum ({total}) is Even")
+else:
+    print(f"The sum ({total}) is Odd")
+
+print(f"Script name: {script_name}")
