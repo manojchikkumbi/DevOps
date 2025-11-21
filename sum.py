@@ -16,6 +16,8 @@ total = num1 + num2
 
 # Print script name (optional)
 script_name = sys.argv[0]
+num1=15
+num2=20
 print(f"Script name: {script_name}")
 
 # Check even/odd
