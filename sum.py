@@ -1,8 +1,8 @@
 import sys
 
 # Default values
-num1 = 155
-num2 = 200
+num1 = 300
+num2 = 500
 
 # Try to get command-line arguments
 try:
